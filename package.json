@@ -1,5 +1,5 @@
 {
-  "name": "Jet-Black",
+  "name": "jet-black",
   "version": "0.0.1",
   "private": true,
   "workspaces": [
@@ -10,12 +10,12 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write ."
   },
   "devDependencies": {
     "eslint-config-custom": "workspace:*",
     "prettier": "2.7.1",
-    "prettier-plugin-svelte": "^2.8.1",
+    "prettier-config-custom": "workspace:*",
     "turbo": "1.6.3"
   },
   "engines": {

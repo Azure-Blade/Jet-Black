@@ -1,0 +1,7 @@
+
+> ui@0.1.0 lint /home/fractal-tess/dev/Jet-Black/packages/ui
+> prettier --check --ignore-path=../../.prettierignore . && eslint "."
+
+Checking formatting...
+[error] Invalid configuration file `.eslintrc.cjs`: Cannot find module '/home/fractal-tess/dev/Jet-Black/node_modules/prettier-config-custom/.prettier.js'. Please verify that the package.json has a valid "main" entry
+ ELIFECYCLE  Command failed with exit code 2.
