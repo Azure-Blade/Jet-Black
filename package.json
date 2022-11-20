@@ -1,6 +1,6 @@
 {
   "name": "Jet-Black",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -14,8 +14,8 @@
   },
   "devDependencies": {
     "eslint-config-custom": "workspace:*",
-    "prettier": "latest",
-    "turbo": "latest"
+    "prettier": "2.7.1",
+    "turbo": "1.6.3"
   },
   "engines": {
     "node": ">=14.0.0"
