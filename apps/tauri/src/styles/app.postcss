@@ -1,0 +1,23 @@
+@import '@fontsource/roboto/index.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+html {
+  /* Fix tailwindcss/daisyUI applying color to the body tag */
+  background-color: transparent !important;
+  @apply rounded-3xl overflow-hidden;
+}
+
+@layer utilities {
+  /* Class is used for development purposes only */
+  .dev {
+    border: 1px solid red;
+  }
+}

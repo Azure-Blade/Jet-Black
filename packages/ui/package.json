@@ -1,19 +1,17 @@
 {
   "name": "ui",
-  "version": "0.0.0",
-  "main": "./index.tsx",
-  "types": "./index.tsx",
-  "license": "MIT",
+  "version": "0.1.0",
+  "description": "Jet-Black component lib",
+  "type": "module",
+  "module": "index.ts",
+  "svelte": "index.ts",
   "scripts": {
-    "lint": "eslint *.ts*"
+    "lint": "prettier --plugin-search-dir=../prettier-config-custom --check  . && eslint .",
+    "format": "prettier --plugin-search-dir=../prettier-config-custom --write ."
   },
   "devDependencies": {
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6",
-    "eslint": "^7.32.0",
     "eslint-config-custom": "workspace:*",
-    "react": "^18.2.0",
-    "tsconfig": "workspace:*",
-    "typescript": "^4.5.2"
+    "types": "workspace:*",
+    "svelte": "^3.53.1"
   }
 }

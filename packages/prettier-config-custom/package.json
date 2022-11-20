@@ -1,0 +1,10 @@
+{
+  "name": "prettier-config-custom",
+  "authors": "author",
+  "version": "0.1.0",
+  "main": ".prettierrc.js",
+  "dependencies": {
+    "prettier": "2.7.1",
+    "prettier-plugin-svelte": "^2.8.1"
+  }
+}

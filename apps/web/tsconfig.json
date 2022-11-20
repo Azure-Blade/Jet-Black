@@ -1,5 +1,34 @@
 {
-  "extends": "tsconfig/nextjs.json",
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "extends": "./.svelte-kit/tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "$lib": ["src/lib"],
+      "$lib/*": ["src/lib/*"],
+
+      "$styles": ["src/app.postcss"],
+
+      "$layout": ["src/lib/layout"],
+      "$layout/*": ["src/lib/layout/*"],
+
+      "$stores": ["src/lib/stor2es"],
+      "$stores/*": ["src/lib/stores/*"],
+
+      "$components": ["src/lib/components"],
+      "$components/*": ["src/lib/components/*"],
+
+      "$data": ["src/lib/data"],
+      "$data/*": ["src/lib/data/*"],
+
+      "$types": ["src/types.ts"]
+    }
+  }
 }
