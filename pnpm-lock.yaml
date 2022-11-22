@@ -171,10 +171,12 @@ importers:
   packages/tailwind-config:
     specifiers:
       autoprefixer: ^10.4.13
+      daisyui: ^2.41.0
       postcss: ^8.4.19
       tailwindcss: ^3.2.4
     devDependencies:
       autoprefixer: 10.4.13_postcss@8.4.19
+      daisyui: 2.41.0_2lwn2upnx27dqeg6hqdu7sq75m
       postcss: 8.4.19
       tailwindcss: 3.2.4_postcss@8.4.19
 
