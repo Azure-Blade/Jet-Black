@@ -42,14 +42,16 @@ jobs:
       - run: pnpm --filter web build
 
       # Future plans in the works to create tarball from within the caprover/deploy-from-github action.
+      - name: Compress step
       - uses: a7ul/tar-action@v1.1.0
+        id: compress
         with:
           command: c
           cwd: './apps/web/'
           files: |
-            apps/web/build/
-            apps/web/Dockerfile
-            apps/web/captain-definition
+            build/
+            Dockerfile
+            captain-definition
           outPath: deploy.tar
 
       - uses: caprover/deploy-from-github@main
