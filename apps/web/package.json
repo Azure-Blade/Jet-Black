@@ -24,7 +24,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@playwright/test": "^1.27.1",
-    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/adapter-node": "1.0.0-next.101",
     "@sveltejs/kit": "next",
     "@types/js-cookie": "^3.0.2",
     "@typescript-eslint/eslint-plugin": "^5.42.0",
