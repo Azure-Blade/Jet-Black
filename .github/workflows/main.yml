@@ -13,10 +13,10 @@ jobs:
 
     steps:
       - name: Checkout
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
 
       - name: Install Node.js
-      - uses: actions/setup-node@v3
+        uses: actions/setup-node@v3
         with:
           node-version: 16
 
@@ -41,11 +41,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Install dependencies
       - run: pnpm install
-      - name: Cd to website dir
       - run: cd apps/web
-      - name: Build website
       - run: pnpm build
 
       # Future plans in the works to create tarball from within the caprover/deploy-from-github action.
