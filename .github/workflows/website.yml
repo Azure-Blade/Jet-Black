@@ -39,8 +39,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - run: pnpm install
-      - run: cd apps/web
-      - run: pnpm build
+      - run: pnpm --filter web build
 
       # Future plans in the works to create tarball from within the caprover/deploy-from-github action.
       - uses: a7ul/tar-action@v1.1.0
@@ -48,9 +47,9 @@ jobs:
           command: c
           cwd: './'
           files: |
-            build/
-            Dockerfile
-            captain-definition
+            apps/web/build/
+            apps/web/Dockerfile
+            apps/web/captain-definition
           outPath: deploy.tar
 
       - uses: caprover/deploy-from-github@main
