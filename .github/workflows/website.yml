@@ -6,7 +6,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - name: Checkout
@@ -17,8 +17,8 @@ jobs:
         with:
           node-version: 16
 
-      - uses: pnpm/action-setup@v2
-        name: Install pnpm
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
         id: pnpm-install
         with:
           version: 7
@@ -41,21 +41,23 @@ jobs:
       - run: pnpm install
       - run: pnpm --filter web build
 
-      # Future plans in the works to create tarball from within the caprover/deploy-from-github action.
-      - name: Compress step
       - uses: a7ul/tar-action@v1.1.0
         id: compress
         with:
           command: c
-          cwd: './apps/web/'
+          cwd: 'apps/web'
           files: |
             build/
             Dockerfile
             captain-definition
+            package.json
           outPath: deploy.tar
 
-      - uses: caprover/deploy-from-github@main
-        with:
-          server: '${{ secrets.CAPROVER_SERVER }}'
-          app: '${{ secrets.APP_NAME }}'
-          token: '${{ secrets.APP_TOKEN }}'
+      - run: pwd
+      - run: ls -la
+
+      - name: 'Install caprover-cli'
+        run: pnpm i -g caprover
+
+      - name: 'Deploy'
+        run: 'caprover deploy --caproverUrl=${{ secrets.CAPROVER_SERVER }} --appName=${{ secrets.APP_NAME }} --appToken=${{ secrets.APP_TOKEN }} --tarFile=./deploy.tar'

@@ -2,13 +2,11 @@ FROM node:current-alpine3.16
 
 WORKDIR /app
 
-COPY ["build/*", "./"]
+COPY ["./build/", "./package.json", "./"]
 
 ENV NODE_ENV production
-ENV PORT 80
+ENV PORT 3000
 
-EXPOSE 80
-
-USER nobod
+EXPOSE 3000
 
 CMD [ "node", "index.js"  ]
