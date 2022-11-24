@@ -3,6 +3,8 @@ name: Build & Deploy Website
 on:
   push:
     branches: ['release']
+      paths:
+      - "apps/web/*"
 
 jobs:
   build-and-deploy:
