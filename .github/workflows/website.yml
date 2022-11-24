@@ -3,6 +3,8 @@ name: Build & Deploy Website
 on:
   push:
     branches: ['release']
+    paths:
+      - 'apps/web/*'
 
 jobs:
   build-and-deploy:
@@ -52,9 +54,6 @@ jobs:
             captain-definition
             package.json
           outPath: deploy.tar
-
-      - run: pwd
-      - run: ls -la
 
       - name: 'Install caprover-cli'
         run: pnpm i -g caprover
