@@ -53,9 +53,6 @@ jobs:
             package.json
           outPath: deploy.tar
 
-      - run: pwd
-      - run: ls -la
-
       - name: 'Install caprover-cli'
         run: pnpm i -g caprover
 
