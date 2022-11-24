@@ -2,7 +2,7 @@ name: Build & Deploy Website
 
 on:
   push:
-    branches: ['release']
+    branches: ['dev']
     paths:
       - 'apps/web/*'
 
@@ -40,8 +40,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - run: pnpm install
-      - run: pnpm --filter web build
+      - name: Install pnpm dependencies
+        run: pnpm install
+
+      - name: Build website
+        run: pnpm --filter web build
 
       - uses: a7ul/tar-action@v1.1.0
         id: compress
@@ -55,8 +58,8 @@ jobs:
             package.json
           outPath: deploy.tar
 
-      - name: 'Install caprover-cli'
-        run: pnpm i -g caprover
+      # - name: 'Install caprover-cli'
+      #   run: pnpm i -g caprover
 
       - name: 'Deploy'
-        run: 'caprover deploy --caproverUrl=${{ secrets.CAPROVER_SERVER }} --appName=${{ secrets.APP_NAME }} --appToken=${{ secrets.APP_TOKEN }} --tarFile=./deploy.tar'
+        run: 'pnpm caprover deploy --caproverUrl=${{ secrets.CAPROVER_SERVER }} --appName=${{ secrets.DEV_WEBSITE_APP_NAME }} --appToken=${{ secrets.DEV_WEBSITE_APP_TOKEN }} --tarFile=./deploy.tar'
