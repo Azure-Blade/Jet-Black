@@ -13,6 +13,7 @@
     "format": "prettier --write ."
   },
   "devDependencies": {
+    "caprover": "^2.2.3",
     "eslint-config-custom": "workspace:*",
     "prettier": "2.7.1",
     "prettier-config-custom": "workspace:*",
