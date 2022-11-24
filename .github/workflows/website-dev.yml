@@ -58,8 +58,5 @@ jobs:
             package.json
           outPath: deploy.tar
 
-      # - name: 'Install caprover-cli'
-      #   run: pnpm i -g caprover
-
       - name: 'Deploy'
         run: 'pnpm caprover deploy --caproverUrl=${{ secrets.CAPROVER_SERVER }} --appName=${{ secrets.DEV_WEBSITE_APP_NAME }} --appToken=${{ secrets.DEV_WEBSITE_APP_TOKEN }} --tarFile=./deploy.tar'
