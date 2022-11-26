@@ -16,11 +16,8 @@
   data-tauri-drag-region
   class="h-12 bg-base-100 shadow-lg items-center justify-between flex px-2"
 >
-  <button
-    on:click="{theme.toggleTheme}"
-    class="hover:text-secondary ml-2 transition-all"
-  >
-    <ThemeToggle class="w-8" />
+  <button on:click|preventDefault="{theme.toggleTheme}" class="w-8 h-8">
+    <ThemeToggle theme="{$theme}" />
   </button>
 
   <nav>
@@ -47,7 +44,7 @@
   <div class="flex [&>*]:px-2 h-full  [&>*]:transition-all">
     <a
       target="_blank"
-      href="https://github.com/Fractal-Tess/Svelte-Tauri"
+      href="https://github.com/Azure-Blade/Jet-Black"
       class="hover:text-secondary flex items-center"
       rel="noreferrer"
     >
