@@ -60,8 +60,7 @@
         "height": 600,
         "fullscreen": false,
         "transparent": true,
-        "decorations": false,
-        "visible": false
+        "decorations": false
       }
     ]
   }

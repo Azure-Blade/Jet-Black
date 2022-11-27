@@ -25,12 +25,12 @@ export default defineConfig({
 
   publicDir: false,
 
-  clearScreen: false,
-
   // Vite options tailored for Tauri development and only applied in `tauri dev` or `tauri build`
   // prevent vite from obscuring rust errors
-  // tauri expects a fixed port, fail if that port is not available
+  clearScreen: false,
+
   server: {
+    // tauri expects a fixed port, fail if that port is not available
     strictPort: true,
     port: 3000
   },

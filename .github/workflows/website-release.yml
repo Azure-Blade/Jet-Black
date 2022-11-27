@@ -5,6 +5,8 @@ on:
     branches: ['release']
     paths:
       - 'apps/web/*'
+      - 'package/ui/*'
+      - 'package/tailwind/*'
 
 jobs:
   build-and-deploy:
