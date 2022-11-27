@@ -14,9 +14,9 @@
 
 <div
   data-tauri-drag-region
-  class="h-12 bg-base-100 shadow-lg items-center justify-between flex px-2"
+  class="h-12 bg-base-200 shadow-lg items-center justify-between flex px-2"
 >
-  <button on:click|preventDefault="{theme.toggleTheme}" class="w-8 h-8">
+  <button on:click="{theme.toggleTheme}">
     <ThemeToggle theme="{$theme}" />
   </button>
 
