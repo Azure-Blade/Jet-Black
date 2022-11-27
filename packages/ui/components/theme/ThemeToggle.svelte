@@ -1,15 +1,15 @@
 <script lang="ts">
   import type { Theme } from 'types'
-  export let theme: Theme
+  export let theme: Theme = 'dark'
 </script>
 
 <div
   class="{`${
     theme === 'dark' ? 'swap-active' : 'swap-off'
-  } swap swap-rotate`} h-full w-full"
+  } swap swap-rotate`} h-8 w-8"
 >
   <svg
-    class="swap-on fill-current"
+    class="swap-on fill-current h-full w-full"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
     ><path
@@ -18,7 +18,7 @@
   >
 
   <svg
-    class="swap-off fill-current"
+    class="swap-off fill-current h-full w-full"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
     ><path

@@ -16,9 +16,7 @@ const createThemeStore = () => {
     subscribe,
     toggleTheme: () => {
       update(currentTheme => {
-        console.log('Current theme is ', currentTheme)
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark'
-        console.log('New theme is', newTheme)
         localStorage.setItem('theme', newTheme)
         return newTheme
       })
