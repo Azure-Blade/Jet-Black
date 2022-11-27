@@ -25,16 +25,14 @@
   }
 </script>
 
-<div class="h-screen flex flex-col bg-gradient-to-t from-base-300 to-base-100">
+<div class="h-screen flex flex-col bg-base-100">
   <div
     data-tauri-drag-region
-    class="h-12 bg-base-100 shadow-lg items-center justify-between flex px-2"
+    class="h-12 bg-base-200 shadow-lg items-center justify-between flex px-2"
   >
-    <button
-      on:click="{theme.toggleTheme}"
-      class="hover:text-secondary ml-2 transition-all"
-    >
-      <ThemeToggle class="w-8" />
+    <!-- TOOD: Find out why there is unused space without using `grid` -->
+    <button on:click="{theme.toggleTheme}" class="grid">
+      <ThemeToggle theme="{$theme}" />
     </button>
 
     <nav>
