@@ -24,6 +24,8 @@ importers:
       cheerio: 1.0.0-rc.12
       dotenv: ^16.0.3
       mongodb: ^4.12.1
+      pocketbase: ^0.8.3
+      rxjs: ^7.6.0
       ts-node: ^10.9.1
       typescript: ^4.9.3
       vitest: ^0.25.6
@@ -36,6 +38,8 @@ importers:
       cheerio: 1.0.0-rc.12
       dotenv: 16.0.3
       mongodb: 4.12.1
+      pocketbase: 0.8.3
+      rxjs: 7.6.0
       ts-node: 10.9.1_6p7nqubch7mty46g2f7yqsj7we
       typescript: 4.9.3
       vitest: 0.25.6
@@ -4243,6 +4247,10 @@ packages:
     hasBin: true
     dev: true
 
+  /pocketbase/0.8.3:
+    resolution: {integrity: sha512-B1ed44QM6iEeu007br86sDB/QGoMZXPQkujVk4p37q/WIFM0HvIDnffqTbz7oyaE6Sf8t5lNT3Mc2jVIvdxfXQ==}
+    dev: true
+
   /postcss-import/14.1.0_postcss@8.4.19:
     resolution: {integrity: sha512-flwI+Vgm4SElObFVPpTIT7SU7R3qk2L7PyduMcokiaVKuWv9d/U+Gm/QAd8NDLuykTWTkcrjOeD2Pp1rMeBTGw==}
     engines: {node: '>=10.0.0'}
@@ -4581,6 +4589,12 @@ packages:
 
   /rxjs/7.5.7:
     resolution: {integrity: sha512-z9MzKh/UcOqB3i20H6rtrlaE/CgjLOvheWK/9ILrbhROGTweAi1BaFsTT9FbwZi5Trr1qNRs+MXkhmR06awzQA==}
+    dependencies:
+      tslib: 2.4.1
+    dev: true
+
+  /rxjs/7.6.0:
+    resolution: {integrity: sha512-DDa7d8TFNUalGC9VqXvQ1euWNN7sc63TrUCuM9J998+ViviahMIjKSOU7rfcgFOF+FCD71BhDRv4hrFz+ImDLQ==}
     dependencies:
       tslib: 2.4.1
     dev: true
