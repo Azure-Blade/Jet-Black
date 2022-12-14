@@ -6,5 +6,7 @@ describe('scrapper mangakakalot', () => {
 
   it('latest should give an array of mangaInfo', async () => {
     const result = await scrapper.scrapeLatest()
+    const s = await scrapper.mangaInfo(result[0])
+    console.log(s)
   })
 })
