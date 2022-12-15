@@ -1,5 +1,5 @@
 {
-  "name": "jb-scrapper",
+  "name": "scrapper",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
@@ -24,6 +24,7 @@
     "typescript": "^4.9.3",
     "vitest": "^0.25.6",
     "winston": "^3.8.2",
-    "zod": "^3.19.1"
+    "zod": "^3.19.1",
+    "types": "workspace:*"
   }
 }
